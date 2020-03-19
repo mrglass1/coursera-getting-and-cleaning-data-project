@@ -27,6 +27,6 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 ### Project itself
 As per the requirements this project comprises:
 
-1. A tidy data set based on the original data set: [tidydataset.txt](https://github.com/prigyan/courseraGetCleanDataInR/blob/master/tidy_data.txt)
+1. A tidy data set based on the original data set: "tidydataset.txt"
 2. The R script called "run_analysis.R" performs the data analysis
 3. A code book called "CodeBook.md" describes the variables, data and transformations performed to clean up the data 
