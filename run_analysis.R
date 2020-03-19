@@ -49,3 +49,16 @@ names(tidydataysubject) = "inidividuum"
 tidydatax <- cbind(tidydataysubject,tidydatax) 
 
 
+# task #4 - Appropriately labels the data set with descriptive variable names.
+
+#rename the header to tidy data names
+names(tidydatax) <- gsub("[-]std\\(\\)[-]?","std",names(tidydatax));
+names(tidydatax) <- gsub("[-]mean\\(\\)[-]?","mean",names(tidydatax));
+names(tidydatax) <- tolower(names(tidydatax));
+
+
+# task #5 - #creating a tidy dataset file
+tidydata <- group_by(tidydatax,inidividuum,performedactivity) %>% summarise_each(funs(mean)) # dim(tidyData)   [1] 180  68
+
+#  View(tidyData)
+write.table(tidydata, file = "tidydataset.txt", row.names = FALSE,sep="\t")
